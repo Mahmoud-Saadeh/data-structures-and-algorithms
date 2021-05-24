@@ -274,10 +274,10 @@ const extractVowels = (str) => {
   let strArr = str.split('');
   let vowelsArr = ['a','e','i','o','u'];
   const resultStr = strArr.filter(val => !vowelsArr.includes(val));
-  const resultVow = vowelsArr.filter(val => strArr.includes(val));
+  const resultVow = strArr.filter(val => vowelsArr.includes(val));
   const finalResult = [];
   finalResult[0] = resultStr.join('');
-  finalResult[1] = resultVow.join('');
+  finalResult[1] = resultVow.sort().join('');
   return finalResult;
 };
 
